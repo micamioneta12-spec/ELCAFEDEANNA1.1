@@ -1,0 +1,637 @@
+/*==================================================
+ELCAFEDEANNA
+Autor: Oscar Fernando Díaz
+Versión: 1.0
+==================================================*/
+
+/*==============================
+RESET
+==============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/*==============================
+VARIABLES
+==============================*/
+
+:root{
+
+    --cafe:#4e342e;
+    --cafe-claro:#6f4e37;
+    --dorado:#c8a165;
+    --crema:#f7f3ee;
+    --blanco:#ffffff;
+    --gris:#555;
+    --sombra:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+/*==============================
+BODY
+==============================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--crema);
+    color:#333;
+    line-height:1.6;
+
+}
+
+/*==============================
+CONTENEDOR
+==============================*/
+
+.contenedor{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+/*==============================
+HEADER
+==============================*/
+
+header{
+
+    background:var(--cafe);
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:var(--sombra);
+
+}
+
+header .contenedor{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+
+}
+
+.logo h1{
+
+    color:var(--blanco);
+    font-size:28px;
+    font-weight:700;
+
+}
+
+nav ul{
+
+    list-style:none;
+    display:flex;
+    gap:28px;
+
+}
+
+nav ul li a{
+
+    color:var(--blanco);
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:var(--dorado);
+
+}
+
+/*==============================
+BOTONES
+==============================*/
+
+.boton{
+
+    display:inline-block;
+    background:var(--dorado);
+    color:var(--blanco);
+    text-decoration:none;
+    padding:14px 35px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.boton:hover{
+
+    background:var(--cafe-claro);
+    transform:translateY(-3px);
+
+}
+
+.boton-secundario{
+
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 22px;
+    background:var(--cafe);
+    color:#fff;
+    text-decoration:none;
+    border-radius:25px;
+    transition:.3s;
+
+}
+
+.boton-secundario:hover{
+
+    background:var(--dorado);
+
+}/*==============================
+BANNER
+==============================*/
+
+.banner{
+
+    height:100vh;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.45),
+        rgba(0,0,0,.45)),
+        url("../img/banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:#fff;
+
+}
+
+.banner-contenido{
+
+    max-width:800px;
+    padding:20px;
+
+}
+
+.banner h2{
+
+    font-size:60px;
+    margin-bottom:20px;
+
+}
+
+.banner p{
+
+    font-size:22px;
+    margin-bottom:35px;
+
+}
+
+/*==============================
+NOSOTROS
+==============================*/
+
+.nosotros{
+
+    padding:100px 0;
+    background:#ffffff;
+
+}
+
+.nosotros h2{
+
+    text-align:center;
+    color:var(--cafe);
+    font-size:38px;
+    margin-bottom:35px;
+
+}
+
+.nosotros p{
+
+    max-width:900px;
+    margin:20px auto;
+    text-align:center;
+    font-size:18px;
+    color:var(--gris);
+
+}
+
+/*==============================
+PRODUCTOS
+==============================*/
+
+.productos{
+
+    padding:100px 0;
+    background:var(--crema);
+
+}
+
+.productos h2{
+
+    text-align:center;
+    color:var(--cafe);
+    font-size:38px;
+    margin-bottom:50px;
+
+}
+
+.productos-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+
+}
+
+.card{
+
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:var(--sombra);
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card img{
+
+    width:100%;
+    height:260px;
+    object-fit:cover;
+
+}
+
+.card h3{
+
+    color:var(--cafe);
+    text-align:center;
+    margin:20px 0 10px;
+
+}
+
+.card p{
+
+    padding:0 20px;
+    text-align:center;
+    color:var(--gris);
+
+}
+
+.card .boton-secundario{
+
+    display:block;
+    width:max-content;
+    margin:25px auto 30px;
+
+}/*==============================
+BENEFICIOS
+==============================*/
+
+.beneficios{
+
+    padding:100px 0;
+    background:#ffffff;
+
+}
+
+.beneficios h2{
+
+    text-align:center;
+    color:var(--cafe);
+    font-size:38px;
+    margin-bottom:50px;
+
+}
+
+.beneficios-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+
+}
+
+.beneficio{
+
+    background:var(--crema);
+    padding:35px 25px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:var(--sombra);
+    transition:.3s;
+
+}
+
+.beneficio:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.beneficio h3{
+
+    color:var(--cafe);
+    margin-bottom:15px;
+
+}
+
+.beneficio p{
+
+    color:var(--gris);
+
+}
+
+/*==============================
+TESTIMONIOS
+==============================*/
+
+.testimonios{
+
+    padding:100px 0;
+    background:var(--crema);
+
+}
+
+.testimonios h2{
+
+    text-align:center;
+    color:var(--cafe);
+    font-size:38px;
+    margin-bottom:50px;
+
+}
+
+.testimonios-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+
+}
+
+.testimonio{
+
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:var(--sombra);
+
+}
+
+.testimonio p{
+
+    font-style:italic;
+    color:var(--gris);
+    margin-bottom:20px;
+
+}
+
+.testimonio h4{
+
+    color:#f4b400;
+    font-size:22px;
+    margin-bottom:10px;
+
+}
+
+.testimonio span{
+
+    color:var(--cafe);
+    font-weight:600;
+
+}/*==============================
+CONTACTO
+==============================*/
+
+.contacto{
+
+    padding:100px 0;
+    background:#ffffff;
+
+}
+
+.contacto h2{
+
+    text-align:center;
+    color:var(--cafe);
+    font-size:38px;
+    margin-bottom:20px;
+
+}
+
+.contacto p{
+
+    text-align:center;
+    color:var(--gris);
+    margin-bottom:40px;
+
+}
+
+.contacto form{
+
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+}
+
+.contacto input,
+.contacto textarea{
+
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    font-family:'Poppins',sans-serif;
+
+}
+
+.contacto textarea{
+
+    resize:vertical;
+
+}
+
+.contacto button{
+
+    border:none;
+    cursor:pointer;
+
+}
+
+/*==============================
+FOOTER
+==============================*/
+
+footer{
+
+    background:var(--cafe);
+    color:#fff;
+    text-align:center;
+    padding:50px 20px;
+
+}
+
+footer h3{
+
+    font-size:28px;
+    margin-bottom:10px;
+
+}
+
+footer p{
+
+    margin:8px 0;
+
+}
+
+.redes{
+
+    margin:25px 0;
+
+}
+
+.redes a{
+
+    color:#fff;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.redes a:hover{
+
+    color:var(--dorado);
+
+}
+
+footer hr{
+
+    margin:30px auto;
+    width:80%;
+    border:0;
+    border-top:1px solid rgba(255,255,255,.25);
+
+}
+
+.copyright{
+
+    font-size:14px;
+    color:#ddd;
+
+}
+
+/*==============================
+ANIMACIONES
+==============================*/
+
+.card,
+.beneficio,
+.testimonio{
+
+    animation:aparecer 1s ease;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==============================
+RESPONSIVE
+==============================*/
+
+@media(max-width:768px){
+
+    header .contenedor{
+
+        flex-direction:column;
+        gap:20px;
+
+    }
+
+    nav ul{
+
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+
+    }
+
+    .banner h2{
+
+        font-size:38px;
+
+    }
+
+    .banner p{
+
+        font-size:18px;
+
+    }
+
+    .productos-grid,
+    .beneficios-grid,
+    .testimonios-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .nosotros,
+    .productos,
+    .beneficios,
+    .testimonios,
+    .contacto{
+
+        padding:70px 0;
+
+    }
+
+}
